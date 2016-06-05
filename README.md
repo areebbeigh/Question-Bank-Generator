@@ -6,3 +6,10 @@ A personal project to generate and work with XML files for quiz applications. As
 Question Bank Generator is a Windows Forms Application. Using this application you can create simple XML files to store
 multiple choice questions in their respective nodes and also efficiently manage the XML files, such as editing removing etc. all in
 the GUI. This application was made simply to make the process of setting up the question database easier.
+
+##Additional Info
+
+**Developer:** Areeb Beigh<br>
+**Website:** www.areebbeigh.tk<br>
+**Mail:** areebbeigh@gmail.com<br>
+**GitHub Repo:** https://github.com/areeb-beigh/PyDictionary<br>
