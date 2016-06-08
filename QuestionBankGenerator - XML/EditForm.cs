@@ -14,6 +14,9 @@ namespace QuestionBankGenerator___XML
         string RAPID_FIRE = MainForm.RAPID_FIRE;
         XmlNode editQuestion = MainForm.selectedQuestion;
 
+        // Correct answer to the question to be editted
+        string answer;
+
         // These variables store the inputs
         string question, correctAnswer;
         List<string> answers = new List<string>();
@@ -33,6 +36,18 @@ namespace QuestionBankGenerator___XML
             radioButton2.Text = answers[1];
             radioButton3.Text = answers[2];
             radioButton4.Text = answers[3];
+
+            //MessageBox.Show(answer, "DEBUG");
+
+            // Checks the preset correct answer's radio button
+            if (answer == "1")
+                radioButton1.Checked = true;
+            if (answer == "2")
+                radioButton2.Checked = true;
+            if (answer == "3")
+                radioButton3.Checked = true;
+            if (answer == "4")
+                radioButton4.Checked = true;
         }
 
         // Method to update the question XML
@@ -114,6 +129,9 @@ namespace QuestionBankGenerator___XML
         {
             // Hide the second phase
             groupBox2.Hide();
+
+            // Sets the answer
+            answer = editQuestion.ParentNode.LastChild.InnerText;
 
             // Render the values from XML file to respective text boxes
             if (xmlType == MCQ)
